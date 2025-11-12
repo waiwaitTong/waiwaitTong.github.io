@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>My Site Blog</title>
+        <link>https://waiwaitTong.github.io/blog</link>
+        <description>My Site Blog</description>
+        <lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[个人网站搭建.md - 副本]]></title>
+            <link>https://waiwaitTong.github.io/blog/2025/10/31/个人网站搭建.md - 副本</link>
+            <guid>https://waiwaitTong.github.io/blog/2025/10/31/个人网站搭建.md - 副本</guid>
+            <pubDate>Fri, 31 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[经学长建议决定搭一个个人网站 以记录自己各种  可以避免出现想发表重要意见 但没有具体的发表对象 又不乐意发朋友圈的情况]]></description>
+            <content:encoded><![CDATA[<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">title: "个人网站搭建"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">authors: 歪歪踢</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">tags: [blog]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">date: 2025-10-31</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">---</span><br></span></code></pre></div></div>
+<h1>动机</h1>
+<p>经学长建议决定搭一个个人网站 以记录自己各种  可以避免出现想发表重要意见 但没有具体的发表对象 又不乐意发朋友圈的情况</p>
+<h1>收获</h1>
+<ol>
+<li class="">
+<p>Markdown使用</p>
+</li>
+<li class="">
+<p>AI辅助与认清AI</p>
+</li>
+</ol>
+<h1>步骤</h1>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="环境准备">环境准备<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87" class="hash-link" aria-label="Direct link to 环境准备" title="Direct link to 环境准备" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>生成 SSH 密钥：<code>ssh-keygen -t rsa -C "your_email@example.com"</code></p>
+</li>
+<li class="">
+<p>将公钥添加到 GitHub：<code>cat ~/.ssh/id_rsa.pub</code></p>
+</li>
+<li class="">
+<p>配置 SSH 使用 443 端口</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="项目部署">项目部署<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2" class="hash-link" aria-label="Direct link to 项目部署" title="Direct link to 项目部署" translate="no">​</a></h3>
+<div class="language-markdown codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-markdown codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 1. 初始化 Git 仓库</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git init</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git add .</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m "Initial commit"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 2. 创建 GitHub 仓库（空仓库）</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 3. 设置远程仓库</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git remote add origin git@github.com:waiwaitTong/waiwaitTong.github.io.git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git push -u origin master</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 4. 创建 gh-pages 分支</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git checkout --orphan gh-pages</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">echo "# GitHub Pages" &gt; README.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git add README.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m "Initial gh-pages"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git push origin gh-pages</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git checkout master</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 5. 确认 baseUrl 配置正确</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 在 docusaurus.config.js 中设置 baseUrl: '/'</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 6. 部署</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">yarn deploy</span><br></span></code></pre></div></div>
+<h1>问题及解决方案</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="环境配置问题">环境配置问题<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to 环境配置问题" title="Direct link to 环境配置问题" translate="no">​</a></h2>
+<p>cmd检测版本号成功 powershell不成功 </p>
+<p>尝试重装后 开开关关cmd和powershell  再检测又成功</p>
+<p>deepseek解释说下载前打开终端导致</p>
+<p>那以后多开开关关终端好了</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="权限问题">权限问题<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to 权限问题" title="Direct link to 权限问题" translate="no">​</a></h2>
+<p>管理员权限运行即可</p>
+<p>或一劳永逸：将code文件夹属性安全改为完全控制</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="网页不刷新">网页不刷新<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E7%BD%91%E9%A1%B5%E4%B8%8D%E5%88%B7%E6%96%B0" class="hash-link" aria-label="Direct link to 网页不刷新" title="Direct link to 网页不刷新" translate="no">​</a></h2>
+<p>并非不刷新</p>
+<p>只是新手初始化教程中选择的页面问题 </p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="网页崩溃">网页崩溃<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E7%BD%91%E9%A1%B5%E5%B4%A9%E6%BA%83" class="hash-link" aria-label="Direct link to 网页崩溃" title="Direct link to 网页崩溃" translate="no">​</a></h2>
+<p>不知道啥情况 直接重启网站好了</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="编辑后打开巨卡无比">编辑后打开巨卡无比<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E7%BC%96%E8%BE%91%E5%90%8E%E6%89%93%E5%BC%80%E5%B7%A8%E5%8D%A1%E6%97%A0%E6%AF%94" class="hash-link" aria-label="Direct link to 编辑后打开巨卡无比" title="Direct link to 编辑后打开巨卡无比" translate="no">​</a></h2>
+<p> npm run build重启</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="github-pages-部署问题总结">GitHub Pages 部署问题总结<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#github-pages-%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to GitHub Pages 部署问题总结" title="Direct link to GitHub Pages 部署问题总结" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="以为成功后网站简陋且丢失blog页面">以为成功后网站简陋且丢失blog页面<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#%E4%BB%A5%E4%B8%BA%E6%88%90%E5%8A%9F%E5%90%8E%E7%BD%91%E7%AB%99%E7%AE%80%E9%99%8B%E4%B8%94%E4%B8%A2%E5%A4%B1blog%E9%A1%B5%E9%9D%A2" class="hash-link" aria-label="Direct link to 以为成功后网站简陋且丢失blog页面" title="Direct link to 以为成功后网站简陋且丢失blog页面" translate="no">​</a></h3>
+<p>似乎是github强制使用自己的网站部署</p>
+<p>使用deepseek和csdn推送的教程均不顶用</p>
+<p>于是选择一切初始化 重新连接仓库开始</p>
+<p><a href="https://www.docusaurus.io/docs/deployment#deploying-to-github-pages%E4%BA%8B%E5%AE%9E%E4%B8%8A%E6%9C%89%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3" target="_blank" rel="noopener noreferrer" class="">https://www.docusaurus.io/docs/deployment#deploying-to-github-pages事实上有官方文档</a></p>
+<p>可读性不强</p>
+<p>让AI总结了一份</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ssh-密钥生成与配置问题">SSH 密钥生成与配置问题<a href="https://waiwaittong.github.io/blog/2025/10/31/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA.md%20-%20%E5%89%AF%E6%9C%AC#ssh-%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%E4%B8%8E%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to SSH 密钥生成与配置问题" title="Direct link to SSH 密钥生成与配置问题" translate="no">​</a></h3>
+<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ssh</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> connect to host github</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">com port </span><span class="token number" style="color:#36acaa">22</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> Connection refused</span><br></span></code></pre></div></div>
+<div class="language-markdown codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-markdown codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 使用 443 端口测试连接</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ssh -T -p 443 git@ssh.github.com</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 创建 SSH 配置文件</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mkdir -p </span><span class="token strike punctuation" style="color:#393A34">~</span><span class="token strike content">/.ssh</span><br></span><span class="token-line" style="color:#393A34"><span class="token strike content">cat &gt; </span><span class="token strike punctuation" style="color:#393A34">~</span><span class="token plain">/.ssh/config &lt;&lt; 'EOF'</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Host github.com</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Hostname ssh.github.com</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Port 443</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    User git</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">EOF</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token title important punctuation" style="color:#393A34">#</span><span class="token title important"> 设置文件权限</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">chmod 600 ~/.ssh/config</span><br></span></code></pre></div></div>
+<h1>遗留问题</h1>
+<ol>
+<li class="">
+<p>docker学习使用</p>
+</li>
+<li class="">
+<p>英文阅读</p>
+</li>
+<li class="">
+<p>新手如何利用ai快速入门 且判别ai正确性</p>
+</li>
+</ol>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://waiwaitTong.github.io/blog/welcome</link>
+            <guid>https://waiwaitTong.github.io/blog/welcome</guid>
+            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></description>
+            <content:encoded><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
+<p>Here are a few tips you might find useful.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
+<p>The blog post date can be extracted from filenames, such as:</p>
+<ul>
+<li class=""><code>2019-05-30-welcome.md</code></li>
+<li class=""><code>2019-05-30-welcome/index.md</code></li>
+</ul>
+<p>A blog post folder can be convenient to co-locate blog post images:</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://waiwaittong.github.io/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p>The blog supports tags as well!</p>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content:encoded>
+            <category>Facebook</category>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[MDX Blog Post]]></title>
+            <link>https://waiwaitTong.github.io/blog/mdx-blog-post</link>
+            <guid>https://waiwaitTong.github.io/blog/mdx-blog-post</guid>
+            <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>
+            <content:encoded><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
+<!-- -->
+<p>For example, use JSX to create an interactive button:</p>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
+<button>Click me!</button>]]></content:encoded>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[Long Blog Post]]></title>
+            <link>https://waiwaitTong.github.io/blog/long-blog-post</link>
+            <guid>https://waiwaitTong.github.io/blog/long-blog-post</guid>
+            <pubDate>Wed, 29 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is the summary of a very long blog post,]]></description>
+            <content:encoded><![CDATA[<p>This is the summary of a very long blog post,</p>
+<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[歪歪踢]]></title>
+            <link>https://waiwaitTong.github.io/blog/first-blog-post</link>
+            <guid>https://waiwaitTong.github.io/blog/first-blog-post</guid>
+            <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet...]]></description>
+            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>Hola</category>
+            <category>Docusaurus</category>
+        </item>
+        <item>
+            <title><![CDATA[First Blog Post]]></title>
+            <link>https://waiwaitTong.github.io/blog/first-blog-post</link>
+            <guid>https://waiwaitTong.github.io/blog/first-blog-post</guid>
+            <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet...]]></description>
+            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <category>Hola</category>
+            <category>Docusaurus</category>
+        </item>
+    </channel>
+</rss>
