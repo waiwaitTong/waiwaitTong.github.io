@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waiwaitTong.github.io/blog</id>
-    <title>My Site Blog</title>
+    <title>歪歪踢 Blog</title>
     <updated>2025-11-12T01:47:30.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://waiwaitTong.github.io/blog"/>
-    <subtitle>My Site Blog</subtitle>
+    <subtitle>歪歪踢 Blog</subtitle>
     <icon>https://waiwaitTong.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[机器人云台数据接收与控制]]></title>
