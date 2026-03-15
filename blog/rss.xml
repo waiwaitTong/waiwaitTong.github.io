@@ -4,10 +4,51 @@
         <title>歪歪踢 Blog</title>
         <link>https://waiwaitTong.github.io/blog</link>
         <description>歪歪踢 Blog</description>
-        <lastBuildDate>Fri, 31 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 15 Mar 2026 12:21:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[本地文件夹与github远程仓库建立联系]]></title>
+            <link>https://waiwaitTong.github.io/blog/git笔记</link>
+            <guid>https://waiwaitTong.github.io/blog/git笔记</guid>
+            <pubDate>Sun, 15 Mar 2026 12:21:27 GMT</pubDate>
+            <description><![CDATA[- 初始化]]></description>
+            <content:encoded><![CDATA[<ul>
+<li class="">初始化</li>
+</ul>
+<p>注意新建远程仓库不要勾选创建readme文件</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git init  #本地vscode建立初始仓库</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git add . #暂存文件</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m "init" #建立一版版本快照</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git branch -M main #将该分支命名为main</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git remote add origin 仓库地址 #设置绑定远程仓库</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git push -u origin main      # 上传代码并建立跟踪关系</span><br></span></code></pre></div></div>
+<ul>
+<li class="">
+<p>日常操作</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git pull #拉取当前最新仓库</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git add . #暂存修改</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m "update" #保存一版</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git push #提交到远程仓库</span><br></span></code></pre></div></div>
+</li>
+</ul>
+<h1>一些常用命令</h1>
+<ul>
+<li class="">
+<p>将文件添加到暂存区</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git add .</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>将暂存区文件添加到当前分支</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git commit -m"message"</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>查看日志</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git reflog</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>回到某个状态</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git reset --hard &lt;哈希值&gt;</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>修改上一次注释</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git commit --amend -m"message"</span><br></span></code></pre></div></div>
+</li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[个人网站搭建]]></title>
             <link>https://waiwaitTong.github.io/blog/2025/10/31/个人网站搭建</link>
